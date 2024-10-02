@@ -1,11 +1,12 @@
 :root {
   --app-bg: url(https://i.imgur.com/bgmVeyt.jpg);
-  --app-blur: 6px;
+  --app-blur: 0px;
   --app-margin: 24px;
   --app-radius: 10px;
-  --main-rgb: 0,0,0;
+  --main-rgb: rgb(30,30,30);
+  --main-rgba: rgb(13,13,13);
   --main-content-opacity: 0.2;
-  --sidebar-opacity: 0.4;
+  --sidebar-opacity: 0.9;
   --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
   --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
   --accent-hue: 156;
@@ -94,6 +95,14 @@
   --scrollbar-opacity: 0.2;
   --scrollbar-opacity-hover: 0.3;
   --scrollbar-width: 10px;
+  --grow: 240px;
+}
+
+:root:has(.chatContent_a7d72e) {
+  --grow: 0px;
+}
+:root:has(.container_cbd271) {
+  --grow: 240px;
 }
 
 .theme-dark,
@@ -116,7 +125,7 @@ body {
 }
 
 .appMount_ea7e65 {
-  background: var(--app-bg) !important;
+  background: linear-gradient( rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%), linear-gradient(90deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), var(--app-bg) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
@@ -134,7 +143,7 @@ body {
 }
 
 .layers_a01fb1 {
-  margin: calc(var(--app-margin) / 2) var(--app-margin) var(--app-margin) var(--app-margin);
+  margin: calc(0px / 2) var(--app-margin) 0px 0px;
   border-radius: var(--app-radius);
   overflow: hidden;
   z-index: 1;
@@ -147,7 +156,7 @@ body {
 
 .app_a01fb1,
 .bg_d4b6c5 {
-  background-color: transparent;
+  background: transparent;
 }
 
 .container_e40c16 {
@@ -162,6 +171,20 @@ body {
   border-radius: var(--popout-radius);
   box-shadow: var(--popout-shadow);
   backdrop-filter: blur(var(--popout-blur));
+}
+.platform-win .layer_d4b6c5 {
+  top: -22px;
+  padding-top: 22px;
+}
+
+.appAsidePanelWrapper_bd26cc {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  margin: 0%;
+}
+.base_a4d4d9 {
+  padding-top: 24px;
 }
 
 /*
@@ -200,6 +223,7 @@ body {
 .platform-osx .wrapper_fea3ef {
   margin-top: 0;
   padding-top: 35px;
+  opacity: 0.8;
 }
 .platform-osx .tree_fea3ef {
   margin-top: 32px;
@@ -215,7 +239,7 @@ body {
 }
 
 .sidebar_a4d4d9 {
-  background-color: var(--sidebar-color);
+  background-color: transparent;
 }
 .sidebar_a4d4d9 .container_ee69e0 {
   background-color: transparent;
@@ -229,7 +253,7 @@ body {
 
 .header_fd6364 {
   background-color: transparent !important;
-  box-shadow: var(--popout-header-shadow);
+  box-shadow: none;
 }
 .header_fd6364 .communityInfoPill_fd6364 {
   background-color: var(--card-color);
@@ -258,7 +282,16 @@ body {
 .actionButton-2ae9DJ.actionButtonSelected-2a5GGr {
   background-color: var(--background-modifier-accent);
 }
-
+/* .bannerImg_fd6364, .animatedContainer_fd6364 {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+} */
 /*
  *
  *  PANELS
@@ -404,11 +437,34 @@ body {
  */
 .chat_a7d72e,
 .noChannel_e1ef5f {
-  background-color: var(--main-content-color) !important;
+  background: transparent !important;
+  margin: 20px 0px 0px 0px;
+  border-radius: 17px;
+}
+.title_a7d72e {
+  width: auto;
+}
+.subtitleContainer_a7d72e {
+  opacity: 0.8;
+  background: linear-gradient(var(--main-rgb), var(--main-rgb)) padding-box, linear-gradient(to bottom, rgb(36, 36, 36), rgb(36, 36, 36)) border-box;
+  border-radius: 17px 17px 0px 0px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid transparent;
+  left: 0%;
+  margin-right: var(--grow);
+  box-shadow: 0px -5px 8px #000000
 }
 
 .chatContent_a7d72e {
-  background-color: transparent;
+  opacity: 0.8;
+  background: linear-gradient(var(--main-rgb), var(--main-rgb)) padding-box, linear-gradient(to bottom, rgb(36, 36, 36), rgb(24, 24, 24)) border-box;
+  border-radius: 0px 0px 17px 17px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  box-shadow: 0px 5px 8px #000000;
+  margin-bottom: 40px;
 }
 
 .content_a7d72e:before {
@@ -4758,7 +4814,8 @@ body {
  *
  */
 .wrapper_fea3ef {
-  background-color: var(--sidebar-color);
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: var(--app-radius);
 }
 .wrapper_fea3ef .tree_fea3ef:focus {
   outline: none;
@@ -5058,6 +5115,9 @@ body {
  */
 .container__33507 {
   height: auto;
+}
+.container_fd6364 {
+  margin-top: 80px;
 }
 
 .card_ffe375:before {
