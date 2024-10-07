@@ -1,7 +1,51 @@
+/**
+ * @name Server Theme
+ * @version 1.0.0
+ * @description New Clean Discord theme, Presents the server chat in a clean and island style.
+ * @author Vppelli
+ *
+ * @website https://github.com/vppelli
+ * @source https://github.com/vppelli/ServerTheme
+ * @donate none :)
+ * @invite none :)
+ */
+
+
+
+/*  Add your own font */
+/* @import url(Font_Link);  */
+
+/* Using CapnKitten Translucence Theme as Base Template Thankyou! 
+ * @website http://github.com/CapnKitten
+ * @source https://github.com/CapnKitten/BetterDiscord/tree/master/Themes/Translucence
+ * @donate https://paypal.me/capnkitten
+ */
+
+/*                       CSS Class For Dummys                  
+*
+*   For Colors you can use these formates HEX, RGB, and HSL | #00000; = Black | rgb(255, 255, 255); = White | hsl(278, 31%, 44%); = Mid Purple
+*
+*   For Transparent Colors use RGBA or HSLA | rgba(255, 255, 255, 0); = Invisable 0 mean full transparent 1 for solid color | hsla(278, 31%, 44%, 0); = Invisable 0 mean full transparent 1 for solid color
+*   anything that uses color can use transparancy colors
+*
+*   Image Links use url(YOUR_IMAGE_LINK_HERE); this only works on areas that have image URL or Linear Gradient text
+*
+*   Gifs! Yes Gifs you can add them too they use the same format as Images use | url(YOUR_GIF_LINK_HERE);
+*   
+*   You can size images and gifs, scale them to fit using | "cover" to cover | "contain" keeps the size of image | Percentages % Example ( 50% ) will zoom in 50%
+*
+*   Position of Images use these | center will center it | Percentages % example ( 100% 50% ) will move to the left 100% of the image and will move up 50% of the image size so ( 50% 50% ) will do what ( center ) does
+*
+*   Gradiens work like this use the | linear-gradient(45deg, #000, #fff); ( 45deg moves the gradient 45 degrees ) ( color, color adds the two colors you want : adding more colors will work too dont forget to do a "," after each color add)
+*
+*/
+
+
+
 @import url(https://raw.githubusercontent.com/vppelli/ServerTheme/refs/heads/main/src/css/source.css);
 
 :root {
-    --app-bg: url(https://github.com/Allisterarc/Shadow/blob/main/img/Baam-Falling.png?raw=true) center/cover no-repeat;
+    --app-bg: url(https://wallpapers.com/images/high/mystical-butterfly-bookish-theme-d36fdpn8dde6m6ua.webp) center/cover no-repeat;
     --app-blur: 0px;
     --app-margin: 24px;
     --app-radius: 10px;
